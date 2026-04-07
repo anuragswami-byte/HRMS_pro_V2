@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-)l_*4e-x*7h+9u%w0f=$y0h!_n-(t7c_!f_3c4@$p_!b_#1v2')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = ['192.168.29.124', '127.0.0.1', 'localhost', 'hrms-pro-v2.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
