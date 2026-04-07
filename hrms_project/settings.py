@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-)l_*4e-x*7h+9u%w0f=$y0h!_n-(t7c_!f_3c4@$p_!b_#1v2')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = ['hrms-pro-v2.onrender.com']
+ALLOWED_HOSTS = ['hrms-pro-v2.onrender.com', '127.0.0.1']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_TRUSTED_ORIGINS = ['https://hrms-pro-v2.onrender.com']
 
@@ -59,7 +59,7 @@ WSGI_APPLICATION = 'hrms_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
         'USER': config('DB_USER', default='Yash'),
         'PASSWORD': config('DB_PASSWORD', default='admin123'),
         'HOST': config('DB_HOST', default='localhost'),
